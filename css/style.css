@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+}
+
+#map {
+  flex: 1;
+  min-width: 0;
+}
+
+#sidebar {
+  width: 320px;
+  background: #16213e;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  border-left: 2px solid #0f3460;
+}
+
+.tab-nav {
+  display: flex;
+  gap: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #0f3460;
+}
+
+.tab-link {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #8899aa;
+  background: #0f3460;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab-link:hover {
+  background: #1a4a8a;
+  color: #ccc;
+}
+
+.tab-link.active {
+  background: #e94560;
+  color: #fff;
+}
+
+#sidebar h2 {
+  color: #e94560;
+  font-size: 1.3rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #0f3460;
+}
+
+#trip-info {
+  background: #0f3460;
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-row .label {
+  color: #8899aa;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-row .value {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+#progress-bar-container {
+  background: #0f3460;
+  border-radius: 4px;
+  height: 6px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  background: #e94560;
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#main-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+#main-controls button {
+  background: #0f3460;
+  border: 1px solid #1a4a8a;
+  color: #fff;
+  width: 52px;
+  height: 44px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-controls button:hover {
+  background: #1a4a8a;
+}
+
+#main-controls button:active {
+  transform: scale(0.95);
+}
+
+#btn-play {
+  width: 72px;
+  background: #e94560;
+  border-color: #e94560;
+}
+
+#btn-play:hover {
+  background: #c73a52;
+}
+
+#speed-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+#speed-control label {
+  color: #8899aa;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+#speed-slider {
+  flex: 1;
+  accent-color: #e94560;
+  cursor: pointer;
+}
+
+#speed-label {
+  color: #e94560;
+  font-weight: 700;
+  font-size: 0.9rem;
+  min-width: 28px;
+  text-align: right;
+}
+
+#trip-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+#trip-list h3 {
+  color: #8899aa;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+#trip-list-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#trip-list-items li {
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  color: #8899aa;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  transition: background 0.2s, color 0.2s;
+}
+
+#trip-list-items li.active {
+  background: #0f3460;
+  color: #fff;
+}
+
+#trip-list-items li.completed {
+  color: #5a6a7a;
+}
+
+#trip-list-items li .trip-idx {
+  font-weight: 600;
+  min-width: 24px;
+}
+
+.mapboxgl-ctrl-attrib {
+  font-size: 10px !important;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  #app {
+    flex-direction: column;
+  }
+
+  #map {
+    flex: 1;
+    min-height: 50vh;
+  }
+
+  #sidebar {
+    width: 100%;
+    max-height: 45vh;
+    border-left: none;
+    border-top: 2px solid #0f3460;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  #sidebar h2 {
+    font-size: 1rem;
+  }
+
+  #trip-info {
+    padding: 12px 14px;
+    gap: 8px;
+  }
+
+  .info-row .label {
+    font-size: 0.75rem;
+  }
+
+  .info-row .value {
+    font-size: 0.95rem;
+  }
+
+  #main-controls button {
+    width: 44px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  #btn-play {
+    width: 60px;
+  }
+
+  .tab-link {
+    padding: 6px 0;
+    font-size: 0.75rem;
+  }
+
+  #trip-list {
+    max-height: 100px;
+  }
+}
+
+/* Version badge */
+.version {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  padding: 6px 18px;
+  border-radius: 16px;
+  z-index: 100;
+  pointer-events: none;
+}

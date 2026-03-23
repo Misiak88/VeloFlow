@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="city.page_title">Bike Vis — City Overview</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/city.css">
+</head>
+<body>
+  <div id="app">
+    <div id="map"></div>
+    <div id="sidebar">
+      <nav class="tab-nav">
+        <a href="index.html" class="tab-link" data-i18n="nav.single_bike">Single Bike</a>
+        <a href="city.html" class="tab-link active" data-i18n="nav.city_overview">City Overview</a>
+      </nav>
+      <div id="sidebar-header">
+        <h2 data-i18n="city.heading">All Rentals</h2>
+        <button class="toggle-btn" id="sidebar-collapse" data-i18n-title="city.btn_collapse" title="Collapse">▼</button>
+      </div>
+      <div id="info-panel">
+        <div class="info-row">
+          <span class="label" data-i18n="city.label_time">Time</span>
+          <span id="sim-time" class="value">--:--:--</span>
+        </div>
+        <div class="info-row">
+          <span class="label" data-i18n="city.label_active">Active</span>
+          <span id="active-count" class="value">0</span>
+        </div>
+        <div class="info-row">
+          <span class="label" data-i18n="city.label_completed">Completed</span>
+          <span id="completed-count" class="value">0</span>
+        </div>
+        <div class="info-row">
+          <span class="label" data-i18n="city.label_total_distance">Total distance</span>
+          <span id="total-distance" class="value">0.00 km</span>
+        </div>
+      </div>
+
+      <div id="timeline-control">
+        <label for="time-slider" data-i18n="city.label_timeline">Timeline:</label>
+        <input type="range" id="time-slider" min="0" max="1000" value="0" step="1">
+      </div>
+
+      <div id="controls">
+        <div id="main-controls">
+          <button id="btn-reset" data-i18n-title="city.btn_reset" title="Reset">&#8634;</button>
+          <button id="btn-play" data-i18n-title="city.btn_play" title="Play">&#9654;</button>
+        </div>
+        <div id="speed-control">
+          <label for="speed-slider" data-i18n="city.label_speed">Speed:</label>
+          <input type="range" id="speed-slider" min="0" max="21" value="6" step="1">
+          <span id="speed-label">10x</span>
+        </div>
+      </div>
+
+      <div id="stats-panel">
+        <h3 data-i18n="city.stats_heading">Stats</h3>
+        <div id="stats-content">
+          <div class="info-row">
+            <span class="label" data-i18n="city.label_total_trips">Total trips</span>
+            <span id="total-trips" class="value">0</span>
+          </div>
+          <div class="info-row">
+            <span class="label" data-i18n="city.label_time_range">Time range</span>
+            <span id="time-range" class="value">-</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="version">v0.4 alpha</div>
+
+  <script src="i18n/i18n.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js"></script>
+  <script src="config.js"></script>
+  <script src="js/city.js"></script>
+</body>
+</html>

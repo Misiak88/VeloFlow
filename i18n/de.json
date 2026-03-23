@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "single_bike": "Einzelnes Fahrrad",
+    "city_overview": "Stadtübersicht"
+  },
+  "index": {
+    "page_title": "Bike Vis — Einzelnes Fahrrad",
+    "heading": "Einzelnes Fahrrad",
+    "label_trip": "Fahrt",
+    "label_start_time": "Startzeit",
+    "label_distance": "Distanz",
+    "label_total": "Gesamt",
+    "label_status": "Status",
+    "label_speed": "Geschwindigkeit:",
+    "trips_heading": "Fahrten",
+    "btn_reset": "Zurücksetzen",
+    "btn_play": "Abspielen",
+    "btn_skip": "Überspringen",
+    "status_ready": "Bereit",
+    "status_loading": "Route wird geladen...",
+    "status_paused": "Pausiert",
+    "status_in_progress": "In Bearbeitung",
+    "status_loading_next": "Nächste wird geladen...",
+    "status_all_done": "Alle Fahrten abgeschlossen!"
+  },
+  "city": {
+    "page_title": "Bike Vis — Stadtübersicht",
+    "heading": "Alle Ausleihen",
+    "label_time": "Zeit",
+    "label_active": "Aktiv",
+    "label_completed": "Abgeschlossen",
+    "label_total_distance": "Gesamtdistanz",
+    "label_timeline": "Zeitlinie:",
+    "label_speed": "Geschwindigkeit:",
+    "stats_heading": "Statistiken",
+    "label_total_trips": "Fahrten gesamt",
+    "label_time_range": "Zeitraum",
+    "btn_reset": "Zurücksetzen",
+    "btn_play": "Abspielen",
+    "btn_collapse": "Einklappen"
+  }
+}

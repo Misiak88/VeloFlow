@@ -1,0 +1,11 @@
+node_modules
+.git
+*.md
+Dockerfile
+.dockerignore
+docker-compose.yml
+.env
+config.js
+config.example.js
+scripts/
+data/*.csv

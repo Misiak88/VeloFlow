@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "single_bike": "Single Bike",
+    "city_overview": "City Overview"
+  },
+  "index": {
+    "page_title": "Bike Vis — Single Bike",
+    "heading": "Single Bike",
+    "label_trip": "Trip",
+    "label_start_time": "Start time",
+    "label_distance": "Distance",
+    "label_total": "Total",
+    "label_status": "Status",
+    "label_speed": "Speed:",
+    "trips_heading": "Trips",
+    "btn_reset": "Reset",
+    "btn_play": "Play",
+    "btn_skip": "Skip",
+    "status_ready": "Ready",
+    "status_loading": "Loading route...",
+    "status_paused": "Paused",
+    "status_in_progress": "In progress",
+    "status_loading_next": "Loading next...",
+    "status_all_done": "All trips completed!"
+  },
+  "city": {
+    "page_title": "Bike Vis — City Overview",
+    "heading": "All Rentals",
+    "label_time": "Time",
+    "label_active": "Active",
+    "label_completed": "Completed",
+    "label_total_distance": "Total distance",
+    "label_timeline": "Timeline:",
+    "label_speed": "Speed:",
+    "stats_heading": "Stats",
+    "label_total_trips": "Total trips",
+    "label_time_range": "Time range",
+    "btn_reset": "Reset",
+    "btn_play": "Play",
+    "btn_collapse": "Collapse"
+  }
+}

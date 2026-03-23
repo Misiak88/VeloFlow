@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+*.log
+config.js
+data/*_clean.csv
+data/city-routes.json

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="index.page_title">Bike Vis — Single Bike</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="map"></div>
+    <div id="sidebar">
+      <nav class="tab-nav">
+        <a href="index.html" class="tab-link active" data-i18n="nav.single_bike">Single Bike</a>
+        <a href="city.html" class="tab-link" data-i18n="nav.city_overview">City Overview</a>
+      </nav>
+      <h2 data-i18n="index.heading">Single Bike</h2>
+      <div id="trip-info">
+        <div class="info-row">
+          <span class="label" data-i18n="index.label_trip">Trip</span>
+          <span id="trip-number" class="value">-</span>
+        </div>
+        <div class="info-row">
+          <span class="label" data-i18n="index.label_start_time">Start time</span>
+          <span id="trip-time" class="value">-</span>
+        </div>
+        <div class="info-row">
+          <span class="label" data-i18n="index.label_distance">Distance</span>
+          <span id="trip-distance" class="value">-</span>
+        </div>
+        <div class="info-row">
+          <span class="label" data-i18n="index.label_total">Total</span>
+          <span id="total-distance" class="value">0.00 km</span>
+        </div>
+        <div class="info-row">
+          <span class="label" data-i18n="index.label_status">Status</span>
+          <span id="trip-status" class="value" data-i18n="index.status_ready">Ready</span>
+        </div>
+      </div>
+
+      <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
+
+      <div id="controls">
+        <div id="main-controls">
+          <button id="btn-reset" data-i18n-title="index.btn_reset" title="Reset">&#8634;</button>
+          <button id="btn-play" data-i18n-title="index.btn_play" title="Play">&#9654;</button>
+          <button id="btn-skip" data-i18n-title="index.btn_skip" title="Skip">&#9197;</button>
+        </div>
+        <div id="speed-control">
+          <label for="speed-slider" data-i18n="index.label_speed">Speed:</label>
+          <input type="range" id="speed-slider" min="0" max="21" value="6" step="1">
+          <span id="speed-label">10x</span>
+        </div>
+      </div>
+
+      <div id="trip-list">
+        <h3 data-i18n="index.trips_heading">Trips</h3>
+        <ul id="trip-list-items"></ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="version">v0.4 alpha</div>
+
+  <script src="i18n/i18n.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js"></script>
+  <script src="config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

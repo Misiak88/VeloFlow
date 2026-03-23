@@ -1,0 +1,1 @@
+const MAPBOX_TOKEN = 'pk.your_token_here';
