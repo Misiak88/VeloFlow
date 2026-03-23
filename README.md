@@ -3,7 +3,13 @@
 Two animated visualizations of bike-sharing trips built with Mapbox GL JS.
 
 - **Single Bike** (`index.html`) — follow one bike through its rentals across a day, trip by trip
+
+  <video src="assets/demo-single-bike.webm" autoplay loop muted playsinline width="100%"></video>
+
 - **City Overview** (`city.html`) — all rentals of a day animated simultaneously on a city map
+
+  <video src="assets/demo-city-overview.webm" autoplay loop muted playsinline width="100%"></video>
+
 
 Both views auto-center on your data and use real trip speed derived from `end_time - start_time`.
 
@@ -289,3 +295,9 @@ To reset to the default, clear `localStorage` in the browser (`vf_lang` key) or 
 - [Mapbox Directions API](https://docs.mapbox.com/api/navigation/directions/) — cycling profile
 - Vanilla HTML / CSS / JavaScript (no build step)
 - Node.js (ES modules) — data preparation scripts only
+
+---
+
+## License
+
+[MIT](LICENSE)
